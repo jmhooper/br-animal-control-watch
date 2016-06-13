@@ -1,0 +1,19 @@
+.incidents {
+  padding: 0px 36px 72px 36px
+}
+
+.incidents table {
+  border: 1px solid #4A4A4A;
+  border-collapse: collapse;
+
+  th, tr:hover {
+    background-color: #ECECEC;
+  }
+
+  th, td {
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid #4A4A4A;
+    padding: 4px 8px;
+  }
+}
