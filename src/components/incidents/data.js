@@ -20,8 +20,8 @@ const IncidentsData = ({ data }) => (
       </tr>
     </thead>
     <tbody>
-      {data.map(incident => {
-        return <IncidentRow key={incident.cpfileno} incident={incident}/>
+      {data.map((incident, index) => {
+        return <IncidentRow key={index} incident={incident}/>
       })}
     </tbody>
   </table>
