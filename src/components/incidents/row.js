@@ -3,7 +3,7 @@ import moment from "moment"
 
 const IncidentsRow = ({ incident }) => (
   <tr>
-    <td>{incidentTime(incident.impound_date, incident.impound_time)}</td>
+    <td>{incident.impoundDate.format("MMM Do, YYYY - h:mm A")}</td>
     <td>{incident.impoundno}</td>
     <td>{incident.service_code}</td>
     <td>{incident.species}</td>
@@ -18,6 +18,6 @@ const IncidentsRow = ({ incident }) => (
   </tr>
 )
 
-const incidentTime = (date, time) => moment(`${date}`).format(`MMM Do, YYYY - ${time}`)
+const incidentTime = (date, time) => moment(`${date}`).format(`${time}`)
 
 export default IncidentsRow

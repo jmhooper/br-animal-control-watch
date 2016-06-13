@@ -5,7 +5,7 @@ const IncidentsData = ({ data }) => (
   <table>
     <thead>
       <tr>
-        <th>Incident date/time</th>
+        <th>Impound date</th>
         <th>Impound Number</th>
         <th>Service code</th>
         <th>Species</th>

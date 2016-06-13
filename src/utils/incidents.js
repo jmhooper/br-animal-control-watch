@@ -1,3 +1,5 @@
+import moment from "moment"
+
 export const incidentsURL = ({ startDate, endDate, species })  => {
   let url = `https://data.brla.gov/resource/3tyj-sddj.json?$where=impoundno IS NOT NULL AND ${dateFilter(startDate, endDate)}`
   if (species !== "ALL") {
@@ -12,4 +14,4 @@ const dateFilter = (startDate, endDate) => {
   return `impound_date BETWEEN '${startDateString}' AND '${endDateString}'`
 }
 
-
+export const extractIncidentImpoundDate = (incident) => moment(moment(`${incident.impound_date}`).format(`YYYY-MM-DD\T${incident.impound_time}`))

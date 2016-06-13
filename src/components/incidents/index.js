@@ -6,7 +6,7 @@ import IncidentsError from "./error"
 import IncidentsLoading from "./loading"
 import IncidentsEmpty from "./empty"
 import { connect } from "react-redux"
-import sortIncidents from "../../selectors/sortIncidents"
+import transformIncidents from "../../selectors/transformIncidents"
 
 const Incidents = ({ error, isLoading, data }) => (
   <div className="incidents">
@@ -29,7 +29,7 @@ const currentComponent = ({ error, isLoading, data }) => {
 const mapStateToProps = ({ incidents }) => ({
   error: incidents.error,
   isLoading: incidents.isLoading,
-  data: sortIncidents(incidents.data),
+  data: transformIncidents(incidents.data),
 })
 
 export default connect(mapStateToProps)(Incidents)
