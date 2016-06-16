@@ -2,9 +2,9 @@
   "name": "br-animal-control-watch",
   "version": "1.0.0",
   "description": "This web application allows you to view animal control incidents that have occurred in East Baton Rouge Parish. Incidents can be filtered by date and by whether the incident involved a cat or a dog.",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
-    "server": "`npm bin`/webpack-dev-server",
+    "start": "`npm bin`/webpack-dev-server",
     "build": "`npm bin`/webpack"
   },
   "repository": {

@@ -20,10 +20,10 @@ npm install
 ```
 
 Use `webpack-dev-server` to build the JS into the `dist/` directory and serve them on `localhost:8080`.
-The `server` script in `package.json` can be run to make this happen.
+The `start` script in `package.json` can be run to make this happen.
 
 ```shell
-npm run server
+npm start
 ```
 
 # Deploy
