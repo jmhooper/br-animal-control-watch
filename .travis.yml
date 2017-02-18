@@ -1,0 +1,16 @@
+language: javascript
+before_script:
+- npm install
+script: npm run build
+sudo: required
+rvm:
+- 2.4.0
+before_deploy:
+- npm install
+- sudo pip install awscli
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: scripts/deploy.sh
+  on:
+    branch: master
